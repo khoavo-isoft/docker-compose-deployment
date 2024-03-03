@@ -1,0 +1,10 @@
+version: '2'
+services:
+  ddns:
+    image: oznu/cloudflare-ddns:latest
+    restart: always
+    environment:
+      - API_KEY=<api key with rule eidt DNS, read Zone, read Zone Settings>
+      - ZONE=<your zone>
+      - SUBDOMAIN=<your subdomain>
+      - PROXIED= <true | false>
